@@ -1,0 +1,56 @@
+*MPG Regression
+
+**Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+
+vehicle.length -- with a p value of 3.05e-12, we are able to reject the null hypothesis at a 99.9% confidence level. This means there is a meaningful relationship between vehicle length and mpg.
+vehicle.weight -- with a p value of 0.0728, we are able to reject the null hypothesis at a 95% confidence level. At any higher confidence level, this value cannot be considered significant. This means at this confidence level, there is a meaningful relationship between vehicle weight and mpg.  
+spoiler.angle -- with a p value of 0.2339, we are unable to reject the null hypothesis at a 95% or higher confidence level. This means that the relationship between spoiler angle and mpg is random.
+ground.clearance -- with a p value of 2.13e-08, we are able to reject the null hypothesis at a 99.9% confidence level. This means there is a meaningful relationship between ground clearance and mpg. 
+
+**Is the slope of the linear model considered to be zero? Why or why not?
+
+The slope for vehicle length is 6.240e+00, for vehicle weight 1.277e-03, for spoiler angle 8.031e-02 and for ground clearance 3.659e+00. So the slope is not zero. 
+
+**Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+
+the Multiple R-squared is 0.7032, which means 70 percent of the mpg of MechaCar prototypes can be explained using this model. The other 30 percent is perhaps due to variables not measured in this test.
+
+*Suspension Coil Summary
+
+The variance of the suspension coils is 62.29356, which means it meets the standard of not exceeding 100 pounds per inch. 
+
+*Suspension Coil T-Test
+
+p value is much smaller than the significance level of 0.05 percent. So the null hypothesis could be rejected. This means that this sample is statistically different from the mean population results of 1,500 pounds per inch.
+
+* Further Study 
+
+**Metrics: 
+
+Before releasing the new MechaCar prototype in the market, AutosRUs needs to know how the new specifications affect the manufacturing cycle and total cost. Assuming the vehicle length, vehicle length, spoiler angle and ground clearance are the only design specifications that are changing in this prototype, it would be important to know how each of these variables affect Manufacturing Cycle Time and Total Cost to Manufacture. 
+
+Total Cost to Manufacture: This metric is calculated by adding up the total costs of resources involved in producing vehicles including material, labor and overhead.
+
+Manufacturing Cycle Time: This metric measures the time it takes for an automotive manufacturer to complete a single vehicle.
+
+(definitions above are borrowed from: https://guidingmetrics.com/content/key-automotive-industry-metrics/)
+
+**Null and alternative hypothesis:
+
+So there are two sets of hypotheses to be measured in the next phase of testing; one that measures the effect of the new design features on the Total Cost to Manufacture and one that measures the effect of the same variables on the Manufacturing Cycle Time.
+
+Set 1:
+  H0 - The slope of the linear model is 0. The new design specifications in the sample have no statistically meaningful effect on the Manufacturing Cycle Time.
+  H1 - The slope of the linear model is 0. The new design specifications in the sample have no statistically meaningful effect on the Total Cost to Manufacture.
+
+Set 2:
+  H0 - The slope of the linear model is 0. The new design specifications in the sample have no statistically meaningful effect on the Manufacturing Cycle Time.
+  H1 - The slope of the linear model is 0. The new design specifications in the sample have no statistically meaningful effect on the Manufacturing Cycle Time.
+
+**Statistical test:
+
+Both sets of hypotheses could be test using a multiple linear regression model test.
+
+**What data should be collected?
+
+For this test we need to collect data on two sample populations, the control and the experimental groups. The control group measures the Manufacturing Cycle Time and Manufacturing Cycle Time in a randomized sample of cars without the new design features (vehicle length, vehicle weight, spoiler angle and ground clearance) and the experimental group measures the same two variables in a randomized sample with the new design features.
